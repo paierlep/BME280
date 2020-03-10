@@ -33,8 +33,6 @@ courtesy of Brian McNoldy at http://andrew.rsmas.miami.edu.
 
 #include "BME280I2C_BRZO.h"
 
-#ifdef USING_BRZO
-
 #include "brzo_i2c.h"
 
 /****************************************************************/
@@ -93,5 +91,3 @@ bool BME280I2C_BRZO::ReadRegister
     brzo_i2c_end_transaction();
     return (brzo_i2c_end_transaction()==0);
 }
-
-#endif
